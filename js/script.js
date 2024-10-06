@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
     const API_URL = 'https://spark-api-open.xf-yun.com/v1/chat/completions';
     // 使用环境变量获取API密钥
-    const API_KEY = process.env.MY_API_KEY || '';
+    const API_KEY = 'JtcIXSvnmjDOEAZsvhZi:vGItjwusdOUHFVLggCbE';
     const MODEL_NAME = '4.0Ultra';
 
     let chats = loadChats();
