@@ -29,3 +29,4 @@ jobs:
         with:
           branch: gh-pages
           folder: .
+          token: ${{ secrets.CHATAPI }}  # 使用新创建的CHATAPI令牌
