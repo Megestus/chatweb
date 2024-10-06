@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI助手对话框</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div class="floating-sidebar">
+        <ul>
+            <li class="active" data-option="chats">
+                <i class="fas fa-comments"></i>
+                <span>对话</span>
+            </li>
+            <li data-option="option2">
+                <i class="fas fa-cog"></i>
+                <span>选项2</span>
+            </li>
+            <li data-option="option3">
+                <i class="fas fa-question-circle"></i>
+                <span>选项3</span>
+            </li>
+        </ul>
+    </div>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>对话列表</h2>
+                <div>
+                    <button id="newChat" class="new-chat-btn" title="新建对话"><i class="fas fa-plus"></i> 新对话</button>
+                </div>
+            </div>
+            <ul id="chatList" class="chat-list">
+                <!-- 对话列表项将在这里动态添加 -->
+            </ul>
+        </aside>
+        <main class="chat-container">
+            <div class="chat-header">
+                <h1><i class="fas fa-robot"></i> AI助手</h1>
+                <button id="themeToggle" class="theme-toggle" title="切换主题"><i class="fas fa-moon"></i></button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- 对话内容将在这里动态添加 -->
+            </div>
+            <div class="chat-controls">
+                <button id="clearChat" class="control-button" title="清空当前对话"><i class="fas fa-trash"></i></button>
+                <!-- 这里可以添加其他功能按钮 -->
+                <button id="exportChat" class="control-button" title="导出对话"><i class="fas fa-download"></i></button>
+                <button id="settingsButton" class="control-button" title="设置"><i class="fas fa-cog"></i></button>
+            </div>
+            <div class="input-area">
+                <input type="text" class="input-field" id="userInput" placeholder="输入您的问题，或者试试 '你是谁？'">
+                <button class="send-button" onclick="sendMessage()" title="发送消息"><i class="fas fa-paper-plane"></i></button>
+            </div>
+            <div class="loading" id="loading" style="display: none;">
+                AI思考中<span class="loading-dots"></span>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
