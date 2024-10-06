@@ -15,8 +15,9 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Dependencies
-        run: npm ci
+      # 如果您的项目需要安装依赖，请取消下面这行的注释
+      # - name: Install Dependencies
+      #   run: npm install
 
       - name: Build
         run: node build.js
